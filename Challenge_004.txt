@@ -1,0 +1,15 @@
+### Challenge 004
+
+Create a function that takes a String parameter and modify it following these rules
+
+- Change every letter in the string with the next in the alphabet (ie. d -> e, z -> a).
+- Every vowel in this new string (a, e, i, o, u) capitalize it
+- Return this updated string.
+
+#### Examples
+
+Input: "as you th*ink"
+Output: bt zpv UI*jOl
+
+Input: "why is zvan bothering us?"
+Output: xIz jt AwbO cpUIfsjOh vt?
