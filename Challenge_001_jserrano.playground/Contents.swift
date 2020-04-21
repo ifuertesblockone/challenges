@@ -3,8 +3,8 @@ import XCTest
 
 final class ChallengeOne {
     func simpleAdding(_ num: Int) -> Int {
-        if num <= 0 {
-            return 0
+        if num == 1 {
+            return 1
         }
         else {
             return num + simpleAdding(num - 1)
@@ -23,28 +23,6 @@ class ChallengeOneTests: XCTestCase {
     override func tearDown() {
         sut = nil
         super.tearDown()
-    }
-
-    func test_NumIsLessThanZero_SimpleAdding_TheFunctionReturnsZero() {
-        // Given
-        let num = -1
-
-        // When
-        let output = sut.simpleAdding(num)
-
-        // Then
-        XCTAssertEqual(output, 0, "The output must be equal to zero because the number given is not a valid number into the range of the numbers")
-    }
-
-    func test_NumIsEqualToZero_SimpleAdding_TheFunctionReturnsZero() {
-        // Given
-        let num = 0
-
-        // When
-        let output = sut.simpleAdding(num)
-
-        // Then
-        XCTAssertEqual(output, 0, "The output must be equal to zero because zero is not a valid number into the range of the numbers")
     }
 
     func test_NumIsFour_SimpleAdding_TheFunctionReturnsTen() {
