@@ -1,11 +1,11 @@
 ### Challenge 003
 
-Create a function that takes a String and modify it using the following algorithm.
-
-Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a).
-Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.
+Create a function that receives a String parameter and return the largest word in the string. 
+ - If there are two or more words that are the same length, return the first word from the string with that length.
+ - Ignore punctuation and assume the input will not be empty.
 
 :: Examples
+
 Input: "hi&!! you"
 Output: you
 
