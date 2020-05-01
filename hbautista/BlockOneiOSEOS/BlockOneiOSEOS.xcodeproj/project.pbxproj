@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2F5CD7245CB50C00584335 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F5CD6245CB50C00584335 /* ListInteractor.swift */; };
 		CB5782612457147300F3FB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782602457147300F3FB7C /* AppDelegate.swift */; };
 		CB5782632457147300F3FB7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782622457147300F3FB7C /* SceneDelegate.swift */; };
 		CB5782652457147300F3FB7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782642457147300F3FB7C /* HomeView.swift */; };
@@ -18,8 +19,9 @@
 		CB5782D82457456700F3FB7C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782D72457456700F3FB7C /* ListView.swift */; };
 		CB5782DA2457469100F3FB7C /* BlockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782D92457469100F3FB7C /* BlockDetailView.swift */; };
 		CB5782DC2457882500F3FB7C /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782DB2457882500F3FB7C /* BlockChain.swift */; };
-		CB5782DE2458B43C00F3FB7C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782DD2458B43C00F3FB7C /* ListInteractor.swift */; };
+		CB5782DE2458B43C00F3FB7C /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782DD2458B43C00F3FB7C /* ListPresenter.swift */; };
 		CB5782E02458BC1A00F3FB7C /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5782DF2458BC1A00F3FB7C /* Block.swift */; };
+		CB61D509245B7AD700ECB497 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB61D508245B7AD700ECB497 /* ListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB2F5CD6245CB50C00584335 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		CB57825D2457147300F3FB7C /* BlockOneiOSEOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockOneiOSEOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5782602457147300F3FB7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5782622457147300F3FB7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +60,9 @@
 		CB5782D72457456700F3FB7C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		CB5782D92457469100F3FB7C /* BlockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailView.swift; sourceTree = "<group>"; };
 		CB5782DB2457882500F3FB7C /* BlockChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChain.swift; sourceTree = "<group>"; };
-		CB5782DD2458B43C00F3FB7C /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		CB5782DD2458B43C00F3FB7C /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		CB5782DF2458BC1A00F3FB7C /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		CB61D508245B7AD700ECB497 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				CB5782D72457456700F3FB7C /* ListView.swift */,
-				CB5782DD2458B43C00F3FB7C /* ListInteractor.swift */,
+				CB5782DD2458B43C00F3FB7C /* ListPresenter.swift */,
+				CB2F5CD6245CB50C00584335 /* ListInteractor.swift */,
+				CB61D508245B7AD700ECB497 /* ListRouter.swift */,
 			);
 			path = ListModule;
 			sourceTree = "<group>";
@@ -318,13 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2F5CD7245CB50C00584335 /* ListInteractor.swift in Sources */,
 				CB5782DC2457882500F3FB7C /* BlockChain.swift in Sources */,
 				CB5782E02458BC1A00F3FB7C /* Block.swift in Sources */,
 				CB5782612457147300F3FB7C /* AppDelegate.swift in Sources */,
 				CB5782D82457456700F3FB7C /* ListView.swift in Sources */,
-				CB5782DE2458B43C00F3FB7C /* ListInteractor.swift in Sources */,
+				CB5782DE2458B43C00F3FB7C /* ListPresenter.swift in Sources */,
 				CB5782DA2457469100F3FB7C /* BlockDetailView.swift in Sources */,
 				CB5782632457147300F3FB7C /* SceneDelegate.swift in Sources */,
+				CB61D509245B7AD700ECB497 /* ListRouter.swift in Sources */,
 				CB5782652457147300F3FB7C /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

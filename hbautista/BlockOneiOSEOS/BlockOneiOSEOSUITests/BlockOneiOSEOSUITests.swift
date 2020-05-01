@@ -40,4 +40,57 @@ class BlockOneiOSEOSUITests: XCTestCase {
             }
         }
     }
+    
+    func testShowListView() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+             
+            // Swipe left three times to go through the pages
+            app.buttons["toList"].tap()
+
+            app.swipeUp()
+            app.swipeDown()
+            // Onboarding should no longer be displayed
+            XCTAssertTrue(app.isDisplayingHomeView)
+        }
+    }
+    
+    func testShowBlockDetailView() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+             XCTAssertTrue(app.isDisplayingHomeView)
+
+            // Swipe left three times to go through the pages
+            app.buttons["toList"].tap()
+            
+            XCTAssertFalse(app.isDisplayingHomeView)
+            XCTAssertTrue(app.isDisplayingListView)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                app.cells.buttons["Detail"].tap()
+                
+                XCTAssertFalse(app.isDisplayingListView)
+                XCTAssertTrue(app.isDisplayingBlockDetailView)
+                
+            }
+        }
+    }
+}
+
+extension XCUIApplication {
+    var isDisplayingHomeView: Bool {
+        return otherElements["HomeView"].exists
+    }
+    
+    var isDisplayingListView: Bool {
+        return otherElements["ListView"].exists
+    }
+    
+    var isDisplayingBlockDetailView: Bool {
+        return otherElements["BlockDetailView"].exists
+    }
 }

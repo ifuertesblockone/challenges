@@ -21,15 +21,15 @@ struct ListView: View {
 }
 
 struct BlockChainView: View {
-    @ObservedObject var fetcher = BlockChainFetcher()
+    @ObservedObject var fetcher = ListPresenter()
     
     var body: some View {
         List(fetcher.blocks) { block in
             NavigationLink(
-                destination: BlockDetailView(block: block)
+                destination: BlockDetailView(block: block, jsonRawDict: self.fetcher.jsonRawDict)
             ) {
-                Text("\(block.block_num)")
-                Text("\(block.id)") // print boolean
+                Text("\(block.blockNum!)")
+                Text("\(block.id!)")
                 .font(.system(size: 11))
                 .foregroundColor(Color.gray)
             }
