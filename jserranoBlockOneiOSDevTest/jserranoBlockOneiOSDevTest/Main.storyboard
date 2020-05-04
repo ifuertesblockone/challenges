@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D4e-iz-bcC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Block List View Controller-->
+        <scene sceneID="cWa-Xs-eex">
+            <objects>
+                <viewController id="8Za-Wd-TNS" customClass="BlockListViewController" customModule="jserranoBlockOneiOSDevTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vd3-6U-GPh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-TB-qL8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OWi-1C-eHQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="j7F-hd-RzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <state key="normal" title="Show latest blocks"/>
+                                <connections>
+                                    <action selector="didTaspBlockListButton:" destination="8Za-Wd-TNS" eventType="touchUpInside" id="Osl-gl-RVR"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-b0-AsO">
+                                <rect key="frame" x="0.0" y="153" width="414" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h5t-TB-qL8" firstAttribute="top" secondItem="Ioc-st-0JB" secondAttribute="top" id="7NL-dR-rKS"/>
+                            <constraint firstItem="bTO-b0-AsO" firstAttribute="trailing" secondItem="Ioc-st-0JB" secondAttribute="trailing" id="AJz-GE-0vu"/>
+                            <constraint firstItem="bTO-b0-AsO" firstAttribute="bottom" secondItem="Ioc-st-0JB" secondAttribute="bottom" id="GSE-Ox-nKf"/>
+                            <constraint firstItem="h5t-TB-qL8" firstAttribute="leading" secondItem="Ioc-st-0JB" secondAttribute="leading" id="Jtr-rh-aAe"/>
+                            <constraint firstItem="bTO-b0-AsO" firstAttribute="top" secondItem="h5t-TB-qL8" secondAttribute="bottom" constant="5" id="PA1-gu-XO6"/>
+                            <constraint firstItem="bTO-b0-AsO" firstAttribute="leading" secondItem="Ioc-st-0JB" secondAttribute="leading" id="Sqe-V7-yFw"/>
+                            <constraint firstItem="h5t-TB-qL8" firstAttribute="trailing" secondItem="Ioc-st-0JB" secondAttribute="trailing" id="cFM-gd-mRN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ioc-st-0JB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EVP-Rf-Itt"/>
+                    <connections>
+                        <outlet property="tableView" destination="bTO-b0-AsO" id="wwa-9m-ksV"/>
+                        <segue destination="WMu-mK-nvf" kind="show" identifier="BlockDetail" id="Wx8-vr-dTw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNM-II-OkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="131.91964285714286"/>
+        </scene>
+        <!--Block Details-->
+        <scene sceneID="xou-zL-s3x">
+            <objects>
+                <viewController storyboardIdentifier="BlockDetailViewController" title="Block Details" id="WMu-mK-nvf" customClass="BlockDetailViewController" customModule="jserranoBlockOneiOSDevTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WGp-oN-D28">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-AX-y2K">
+                                <rect key="frame" x="15" y="103" width="399" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of transactions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzl-vH-lvL">
+                                <rect key="frame" x="15" y="130" width="399" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producer signature:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q3-yU-X5E">
+                                <rect key="frame" x="15" y="157" width="399" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVh-nE-lOo">
+                                <rect key="frame" x="15" y="184" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didChangeBlockContentVisibility:" destination="WMu-mK-nvf" eventType="valueChanged" id="1PM-nv-RdB"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show JSON block content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35x-Ka-jqf">
+                                <rect key="frame" x="74" y="191" width="320" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-Y5-rBZ">
+                                <rect key="frame" x="15" y="235" width="384" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4ro-Y5-rBZ" firstAttribute="bottom" secondItem="Cc7-t9-NXm" secondAttribute="bottom" id="3NP-tF-gaS"/>
+                            <constraint firstItem="35x-Ka-jqf" firstAttribute="centerY" secondItem="RVh-nE-lOo" secondAttribute="centerY" id="3cZ-AZ-btY"/>
+                            <constraint firstItem="6q3-yU-X5E" firstAttribute="trailing" secondItem="Cc7-t9-NXm" secondAttribute="trailing" id="Clg-ai-H7g"/>
+                            <constraint firstItem="RVh-nE-lOo" firstAttribute="leading" secondItem="WGp-oN-D28" secondAttribute="leading" constant="15" id="DyX-Q3-PdJ"/>
+                            <constraint firstItem="hIO-AX-y2K" firstAttribute="leading" secondItem="Cc7-t9-NXm" secondAttribute="leading" constant="15" id="FSt-g5-Ple"/>
+                            <constraint firstItem="rzl-vH-lvL" firstAttribute="leading" secondItem="Cc7-t9-NXm" secondAttribute="leading" constant="15" id="GJ5-1q-uMr"/>
+                            <constraint firstItem="RVh-nE-lOo" firstAttribute="top" secondItem="6q3-yU-X5E" secondAttribute="bottom" constant="10" id="GLa-Vk-Gbj"/>
+                            <constraint firstItem="4ro-Y5-rBZ" firstAttribute="leading" secondItem="Cc7-t9-NXm" secondAttribute="leading" constant="15" id="Ih5-2X-dv2"/>
+                            <constraint firstItem="Cc7-t9-NXm" firstAttribute="trailing" secondItem="35x-Ka-jqf" secondAttribute="trailing" constant="20" id="Mgt-xE-LMa"/>
+                            <constraint firstItem="hIO-AX-y2K" firstAttribute="top" secondItem="Cc7-t9-NXm" secondAttribute="top" constant="15" id="S1E-UV-kCd"/>
+                            <constraint firstItem="35x-Ka-jqf" firstAttribute="leading" secondItem="RVh-nE-lOo" secondAttribute="trailing" constant="10" id="UZT-vE-Sm9"/>
+                            <constraint firstItem="hIO-AX-y2K" firstAttribute="trailing" secondItem="Cc7-t9-NXm" secondAttribute="trailing" id="Wl3-t6-3ot"/>
+                            <constraint firstItem="rzl-vH-lvL" firstAttribute="trailing" secondItem="Cc7-t9-NXm" secondAttribute="trailing" id="Z6U-OB-HMh"/>
+                            <constraint firstItem="4ro-Y5-rBZ" firstAttribute="top" secondItem="RVh-nE-lOo" secondAttribute="bottom" constant="20" id="cxq-oJ-mwJ"/>
+                            <constraint firstItem="rzl-vH-lvL" firstAttribute="top" secondItem="hIO-AX-y2K" secondAttribute="bottom" constant="10" id="dag-io-zib"/>
+                            <constraint firstItem="Cc7-t9-NXm" firstAttribute="trailing" secondItem="4ro-Y5-rBZ" secondAttribute="trailing" constant="15" id="fEV-mm-5Jd"/>
+                            <constraint firstItem="6q3-yU-X5E" firstAttribute="top" secondItem="rzl-vH-lvL" secondAttribute="bottom" constant="10" id="mlY-2b-XeJ"/>
+                            <constraint firstItem="6q3-yU-X5E" firstAttribute="leading" secondItem="Cc7-t9-NXm" secondAttribute="leading" constant="15" id="tcv-8B-yFR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cc7-t9-NXm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tyk-Tn-zfa"/>
+                    <connections>
+                        <outlet property="blockContentTextView" destination="4ro-Y5-rBZ" id="XT6-Ks-sdN"/>
+                        <outlet property="numberOfTransactionsLabel" destination="rzl-vH-lvL" id="7zB-RB-VVh"/>
+                        <outlet property="producerLabel" destination="hIO-AX-y2K" id="Lkb-3H-5Bi"/>
+                        <outlet property="producerSignatureLabel" destination="6q3-yU-X5E" id="yz8-FZ-k6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXo-qE-pLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="131.91964285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vnY-w5-WNC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D4e-iz-bcC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A2W-FK-33d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Za-Wd-TNS" kind="relationship" relationship="rootViewController" id="4h6-0u-UKV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOM-N0-0gW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="131.91964285714286"/>
+        </scene>
+    </scenes>
+</document>

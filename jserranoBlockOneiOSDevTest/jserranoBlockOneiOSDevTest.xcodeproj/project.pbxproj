@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		540CC272245A179400D70263 /* BlockListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540CC271245A179400D70263 /* BlockListRouter.swift */; };
+		540CC276245A384500D70263 /* BlockDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540CC275245A384500D70263 /* BlockDetailRouter.swift */; };
+		544700052458798E000BEB66 /* MockBlockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544700042458798E000BEB66 /* MockBlockListPresenter.swift */; };
+		54470009245879BD000BEB66 /* MockBlockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54470008245879BD000BEB66 /* MockBlockDetailView.swift */; };
+		5447000B245879D2000BEB66 /* MockBlockDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447000A245879D2000BEB66 /* MockBlockDetailPresenter.swift */; };
+		5447000D24587A00000BEB66 /* GetBlockListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447000C24587A00000BEB66 /* GetBlockListTests.swift */; };
+		5447000F24587A13000BEB66 /* GetBlockchainInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447000E24587A13000BEB66 /* GetBlockchainInfoTests.swift */; };
+		5447001124587A27000BEB66 /* BlockListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447001024587A27000BEB66 /* BlockListInteractorTests.swift */; };
+		5447001324587A36000BEB66 /* BlockListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447001224587A36000BEB66 /* BlockListPresenterTests.swift */; };
+		5447001724587A6B000BEB66 /* BlockDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447001624587A6B000BEB66 /* BlockDetailInteractorTests.swift */; };
+		5447001924587A7E000BEB66 /* BlockDetailPresenterTests.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447001824587A7E000BEB66 /* BlockDetailPresenterTests.swift.swift */; };
+		5447FFF72458783D000BEB66 /* MockBlockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447FFF62458783D000BEB66 /* MockBlockService.swift */; };
+		5447FFF924587861000BEB66 /* MockBlockchainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447FFF824587861000BEB66 /* MockBlockchainService.swift */; };
+		5447FFFD24587896000BEB66 /* MockGetBlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447FFFC24587896000BEB66 /* MockGetBlockList.swift */; };
+		5447FFFF245878AE000BEB66 /* MockGetBlockchainInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447FFFE245878AE000BEB66 /* MockGetBlockchainInfo.swift */; };
+		549AAA4F245B332E00C5352C /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AAA4E245B332E00C5352C /* MockURLSession.swift */; };
+		549AAA52245B348000C5352C /* BlockServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AAA51245B348000C5352C /* BlockServiceTests.swift */; };
+		549AAA54245B382800C5352C /* BlockchainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AAA53245B382800C5352C /* BlockchainServiceTests.swift */; };
+		54B910412453455700ABBEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910402453455700ABBEAF /* AppDelegate.swift */; };
+		54B910472453455800ABBEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B910462453455800ABBEAF /* Assets.xcassets */; };
+		54B9104A2453455800ABBEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B910492453455800ABBEAF /* Preview Assets.xcassets */; };
+		54B9104D2453455800ABBEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B9104B2453455800ABBEAF /* LaunchScreen.storyboard */; };
+		54B910632453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910622453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.swift */; };
+		54B910782453477600ABBEAF /* BlockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910772453477600ABBEAF /* BlockListViewController.swift */; };
+		54B9107A2453479C00ABBEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B910792453479C00ABBEAF /* Main.storyboard */; };
+		54B9107D245349ED00ABBEAF /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9107C245349ED00ABBEAF /* URLSessionProtocol.swift */; };
+		54B9107F24534CF300ABBEAF /* BlockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9107E24534CF300ABBEAF /* BlockService.swift */; };
+		54B9108124537F0E00ABBEAF /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9108024537F0E00ABBEAF /* ServiceResponse.swift */; };
+		54B910842453800900ABBEAF /* BlockServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910832453800900ABBEAF /* BlockServiceAdapter.swift */; };
+		54B91087245380AB00ABBEAF /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B91086245380AB00ABBEAF /* Block.swift */; };
+		54B910892453819900ABBEAF /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910882453819900ABBEAF /* Blockchain.swift */; };
+		54B9108B24538F9D00ABBEAF /* BlockchainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9108A24538F9D00ABBEAF /* BlockchainService.swift */; };
+		54B9108D24538FAD00ABBEAF /* BlockchainServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9108C24538FAD00ABBEAF /* BlockchainServiceAdapter.swift */; };
+		54B9108F24539DE200ABBEAF /* BlockchainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B9108E24539DE200ABBEAF /* BlockchainError.swift */; };
+		54B910912453A3C100ABBEAF /* GetBlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910902453A3C100ABBEAF /* GetBlockList.swift */; };
+		54B910942453A43600ABBEAF /* GetBlockListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910932453A43600ABBEAF /* GetBlockListAdapter.swift */; };
+		54B910972453A5FE00ABBEAF /* BlockListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910962453A5FE00ABBEAF /* BlockListInteractor.swift */; };
+		54B910992453A60C00ABBEAF /* BlockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B910982453A60C00ABBEAF /* BlockListPresenter.swift */; };
+		54BB68142457241D003DE55B /* BlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB68122457241D003DE55B /* BlockTableViewCell.swift */; };
+		54BB68152457241D003DE55B /* BlockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54BB68132457241D003DE55B /* BlockTableViewCell.xib */; };
+		54BB6818245727A1003DE55B /* BlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB6817245727A1003DE55B /* BlockViewModel.swift */; };
+		54BB681B245730B9003DE55B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB681A245730B9003DE55B /* UIViewController.swift */; };
+		54BB681D24573959003DE55B /* GetBlockchainInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB681C24573959003DE55B /* GetBlockchainInfo.swift */; };
+		54BB681F2457398A003DE55B /* GetBlockchainInfoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB681E2457398A003DE55B /* GetBlockchainInfoAdapter.swift */; };
+		54BB682224574A01003DE55B /* BlockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB682124574A01003DE55B /* BlockDetailViewController.swift */; };
+		54BB682424574A1E003DE55B /* BlockDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB682324574A1E003DE55B /* BlockDetailPresenter.swift */; };
+		54BB682624574A2F003DE55B /* BlockDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB682524574A2F003DE55B /* BlockDetailInteractor.swift */; };
+		54F435752458EDD0005F44C4 /* MockBlockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F435742458EDD0005F44C4 /* MockBlockListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54B910542453455800ABBEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54B910352453455700ABBEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B9103C2453455700ABBEAF;
+			remoteInfo = jserranoBlockOneiOSDevTest;
+		};
+		54B9105F2453455800ABBEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54B910352453455700ABBEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B9103C2453455700ABBEAF;
+			remoteInfo = jserranoBlockOneiOSDevTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		540CC271245A179400D70263 /* BlockListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListRouter.swift; sourceTree = "<group>"; };
+		540CC275245A384500D70263 /* BlockDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailRouter.swift; sourceTree = "<group>"; };
+		544700042458798E000BEB66 /* MockBlockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockListPresenter.swift; sourceTree = "<group>"; };
+		54470008245879BD000BEB66 /* MockBlockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockDetailView.swift; sourceTree = "<group>"; };
+		5447000A245879D2000BEB66 /* MockBlockDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockDetailPresenter.swift; sourceTree = "<group>"; };
+		5447000C24587A00000BEB66 /* GetBlockListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockListTests.swift; sourceTree = "<group>"; };
+		5447000E24587A13000BEB66 /* GetBlockchainInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockchainInfoTests.swift; sourceTree = "<group>"; };
+		5447001024587A27000BEB66 /* BlockListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListInteractorTests.swift; sourceTree = "<group>"; };
+		5447001224587A36000BEB66 /* BlockListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListPresenterTests.swift; sourceTree = "<group>"; };
+		5447001624587A6B000BEB66 /* BlockDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailInteractorTests.swift; sourceTree = "<group>"; };
+		5447001824587A7E000BEB66 /* BlockDetailPresenterTests.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailPresenterTests.swift.swift; sourceTree = "<group>"; };
+		5447FFF62458783D000BEB66 /* MockBlockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockService.swift; sourceTree = "<group>"; };
+		5447FFF824587861000BEB66 /* MockBlockchainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockchainService.swift; sourceTree = "<group>"; };
+		5447FFFC24587896000BEB66 /* MockGetBlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetBlockList.swift; sourceTree = "<group>"; };
+		5447FFFE245878AE000BEB66 /* MockGetBlockchainInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetBlockchainInfo.swift; sourceTree = "<group>"; };
+		549AAA4E245B332E00C5352C /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		549AAA51245B348000C5352C /* BlockServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockServiceTests.swift; sourceTree = "<group>"; };
+		549AAA53245B382800C5352C /* BlockchainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainServiceTests.swift; sourceTree = "<group>"; };
+		54B9103D2453455700ABBEAF /* jserranoBlockOneiOSDevTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jserranoBlockOneiOSDevTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B910402453455700ABBEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54B910462453455800ABBEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54B910492453455800ABBEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54B9104C2453455800ABBEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54B9104E2453455800ABBEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B910532453455800ABBEAF /* jserranoBlockOneiOSDevTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jserranoBlockOneiOSDevTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B910592453455800ABBEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B9105E2453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jserranoBlockOneiOSDevTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B910622453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jserranoBlockOneiOSDevTestUITests.swift; sourceTree = "<group>"; };
+		54B910642453455800ABBEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B910772453477600ABBEAF /* BlockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewController.swift; sourceTree = "<group>"; };
+		54B910792453479C00ABBEAF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		54B9107C245349ED00ABBEAF /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		54B9107E24534CF300ABBEAF /* BlockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockService.swift; sourceTree = "<group>"; };
+		54B9108024537F0E00ABBEAF /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		54B910832453800900ABBEAF /* BlockServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockServiceAdapter.swift; sourceTree = "<group>"; };
+		54B91086245380AB00ABBEAF /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		54B910882453819900ABBEAF /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
+		54B9108A24538F9D00ABBEAF /* BlockchainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainService.swift; sourceTree = "<group>"; };
+		54B9108C24538FAD00ABBEAF /* BlockchainServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainServiceAdapter.swift; sourceTree = "<group>"; };
+		54B9108E24539DE200ABBEAF /* BlockchainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainError.swift; sourceTree = "<group>"; };
+		54B910902453A3C100ABBEAF /* GetBlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockList.swift; sourceTree = "<group>"; };
+		54B910932453A43600ABBEAF /* GetBlockListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockListAdapter.swift; sourceTree = "<group>"; };
+		54B910962453A5FE00ABBEAF /* BlockListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListInteractor.swift; sourceTree = "<group>"; };
+		54B910982453A60C00ABBEAF /* BlockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListPresenter.swift; sourceTree = "<group>"; };
+		54BB68122457241D003DE55B /* BlockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTableViewCell.swift; sourceTree = "<group>"; };
+		54BB68132457241D003DE55B /* BlockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockTableViewCell.xib; sourceTree = "<group>"; };
+		54BB6817245727A1003DE55B /* BlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewModel.swift; sourceTree = "<group>"; };
+		54BB681A245730B9003DE55B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		54BB681C24573959003DE55B /* GetBlockchainInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockchainInfo.swift; sourceTree = "<group>"; };
+		54BB681E2457398A003DE55B /* GetBlockchainInfoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockchainInfoAdapter.swift; sourceTree = "<group>"; };
+		54BB682124574A01003DE55B /* BlockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailViewController.swift; sourceTree = "<group>"; };
+		54BB682324574A1E003DE55B /* BlockDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailPresenter.swift; sourceTree = "<group>"; };
+		54BB682524574A2F003DE55B /* BlockDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDetailInteractor.swift; sourceTree = "<group>"; };
+		54F435742458EDD0005F44C4 /* MockBlockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlockListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54B9103A2453455700ABBEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B910502453455800ABBEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B9105B2453455800ABBEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		540CC270245A177000D70263 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				540CC271245A179400D70263 /* BlockListRouter.swift */,
+				540CC275245A384500D70263 /* BlockDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5447000024587956000BEB66 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				54470007245879A1000BEB66 /* BlockDetail */,
+				544700032458797C000BEB66 /* BlockList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		544700032458797C000BEB66 /* BlockList */ = {
+			isa = PBXGroup;
+			children = (
+				544700042458798E000BEB66 /* MockBlockListPresenter.swift */,
+				54F435742458EDD0005F44C4 /* MockBlockListView.swift */,
+			);
+			path = BlockList;
+			sourceTree = "<group>";
+		};
+		54470007245879A1000BEB66 /* BlockDetail */ = {
+			isa = PBXGroup;
+			children = (
+				54470008245879BD000BEB66 /* MockBlockDetailView.swift */,
+				5447000A245879D2000BEB66 /* MockBlockDetailPresenter.swift */,
+			);
+			path = BlockDetail;
+			sourceTree = "<group>";
+		};
+		5447FFF1245877DE000BEB66 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				549AAA4D245B330E00C5352C /* Utilities */,
+				5447000024587956000BEB66 /* Scenes */,
+				5447FFFB24587882000BEB66 /* UseCases */,
+				5447FFFA24587876000BEB66 /* Services */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5447FFF2245877EE000BEB66 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5447000C24587A00000BEB66 /* GetBlockListTests.swift */,
+				5447000E24587A13000BEB66 /* GetBlockchainInfoTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5447FFF3245877FE000BEB66 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5447FFF524587818000BEB66 /* BlockList */,
+				5447FFF42458780B000BEB66 /* BlockDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5447FFF42458780B000BEB66 /* BlockDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5447001624587A6B000BEB66 /* BlockDetailInteractorTests.swift */,
+				5447001824587A7E000BEB66 /* BlockDetailPresenterTests.swift.swift */,
+			);
+			path = BlockDetail;
+			sourceTree = "<group>";
+		};
+		5447FFF524587818000BEB66 /* BlockList */ = {
+			isa = PBXGroup;
+			children = (
+				5447001024587A27000BEB66 /* BlockListInteractorTests.swift */,
+				5447001224587A36000BEB66 /* BlockListPresenterTests.swift */,
+			);
+			path = BlockList;
+			sourceTree = "<group>";
+		};
+		5447FFFA24587876000BEB66 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5447FFF62458783D000BEB66 /* MockBlockService.swift */,
+				5447FFF824587861000BEB66 /* MockBlockchainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5447FFFB24587882000BEB66 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5447FFFC24587896000BEB66 /* MockGetBlockList.swift */,
+				5447FFFE245878AE000BEB66 /* MockGetBlockchainInfo.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		549AAA4D245B330E00C5352C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				549AAA4E245B332E00C5352C /* MockURLSession.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		549AAA50245B346A00C5352C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				549AAA51245B348000C5352C /* BlockServiceTests.swift */,
+				549AAA53245B382800C5352C /* BlockchainServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		54B910342453455700ABBEAF = {
+			isa = PBXGroup;
+			children = (
+				54B9103F2453455700ABBEAF /* jserranoBlockOneiOSDevTest */,
+				54B910562453455800ABBEAF /* jserranoBlockOneiOSDevTestTests */,
+				54B910612453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests */,
+				54B9103E2453455700ABBEAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54B9103E2453455700ABBEAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54B9103D2453455700ABBEAF /* jserranoBlockOneiOSDevTest.app */,
+				54B910532453455800ABBEAF /* jserranoBlockOneiOSDevTestTests.xctest */,
+				54B9105E2453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54B9103F2453455700ABBEAF /* jserranoBlockOneiOSDevTest */ = {
+			isa = PBXGroup;
+			children = (
+				54B910852453809700ABBEAF /* Entities */,
+				54B9107B245349A100ABBEAF /* Utilities */,
+				54B910752453459600ABBEAF /* Extensions */,
+				54B910732453458800ABBEAF /* Common */,
+				54B910722453457600ABBEAF /* Scenes */,
+				54B910712453456F00ABBEAF /* UseCases */,
+				54B910702453456900ABBEAF /* Services */,
+				54B910402453455700ABBEAF /* AppDelegate.swift */,
+				54B910462453455800ABBEAF /* Assets.xcassets */,
+				54B9104B2453455800ABBEAF /* LaunchScreen.storyboard */,
+				54B9104E2453455800ABBEAF /* Info.plist */,
+				54B910482453455800ABBEAF /* Preview Content */,
+				54B910792453479C00ABBEAF /* Main.storyboard */,
+			);
+			path = jserranoBlockOneiOSDevTest;
+			sourceTree = "<group>";
+		};
+		54B910482453455800ABBEAF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				54B910492453455800ABBEAF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54B910562453455800ABBEAF /* jserranoBlockOneiOSDevTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				549AAA50245B346A00C5352C /* Services */,
+				5447FFF3245877FE000BEB66 /* Scenes */,
+				5447FFF2245877EE000BEB66 /* UseCases */,
+				5447FFF1245877DE000BEB66 /* Mocks */,
+				54B910592453455800ABBEAF /* Info.plist */,
+			);
+			path = jserranoBlockOneiOSDevTestTests;
+			sourceTree = "<group>";
+		};
+		54B910612453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54B910622453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.swift */,
+				54B910642453455800ABBEAF /* Info.plist */,
+			);
+			path = jserranoBlockOneiOSDevTestUITests;
+			sourceTree = "<group>";
+		};
+		54B910702453456900ABBEAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				54B9108224537FE400ABBEAF /* Implementation */,
+				54B9107E24534CF300ABBEAF /* BlockService.swift */,
+				54B9108A24538F9D00ABBEAF /* BlockchainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		54B910712453456F00ABBEAF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				54B910922453A42400ABBEAF /* Implementation */,
+				54B910902453A3C100ABBEAF /* GetBlockList.swift */,
+				54BB681C24573959003DE55B /* GetBlockchainInfo.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		54B910722453457600ABBEAF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				540CC270245A177000D70263 /* Router */,
+				54BB6820245749AB003DE55B /* BlockDetail */,
+				54BB681624572791003DE55B /* Models */,
+				54BB6811245723F8003DE55B /* Cells */,
+				54B910762453473500ABBEAF /* BlocksList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		54B910732453458800ABBEAF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				54B9108E24539DE200ABBEAF /* BlockchainError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		54B910752453459600ABBEAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54BB681A245730B9003DE55B /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		54B910762453473500ABBEAF /* BlocksList */ = {
+			isa = PBXGroup;
+			children = (
+				54B910772453477600ABBEAF /* BlockListViewController.swift */,
+				54B910962453A5FE00ABBEAF /* BlockListInteractor.swift */,
+				54B910982453A60C00ABBEAF /* BlockListPresenter.swift */,
+			);
+			path = BlocksList;
+			sourceTree = "<group>";
+		};
+		54B9107B245349A100ABBEAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				54B9108024537F0E00ABBEAF /* ServiceResponse.swift */,
+				54B9107C245349ED00ABBEAF /* URLSessionProtocol.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		54B9108224537FE400ABBEAF /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				54B910832453800900ABBEAF /* BlockServiceAdapter.swift */,
+				54B9108C24538FAD00ABBEAF /* BlockchainServiceAdapter.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		54B910852453809700ABBEAF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				54B91086245380AB00ABBEAF /* Block.swift */,
+				54B910882453819900ABBEAF /* Blockchain.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		54B910922453A42400ABBEAF /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				54B910932453A43600ABBEAF /* GetBlockListAdapter.swift */,
+				54BB681E2457398A003DE55B /* GetBlockchainInfoAdapter.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		54BB6811245723F8003DE55B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				54BB68122457241D003DE55B /* BlockTableViewCell.swift */,
+				54BB68132457241D003DE55B /* BlockTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		54BB681624572791003DE55B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54BB6817245727A1003DE55B /* BlockViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		54BB6820245749AB003DE55B /* BlockDetail */ = {
+			isa = PBXGroup;
+			children = (
+				54BB682124574A01003DE55B /* BlockDetailViewController.swift */,
+				54BB682324574A1E003DE55B /* BlockDetailPresenter.swift */,
+				54BB682524574A2F003DE55B /* BlockDetailInteractor.swift */,
+			);
+			path = BlockDetail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54B9103C2453455700ABBEAF /* jserranoBlockOneiOSDevTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B910672453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTest" */;
+			buildPhases = (
+				54B910392453455700ABBEAF /* Sources */,
+				54B9103A2453455700ABBEAF /* Frameworks */,
+				54B9103B2453455700ABBEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jserranoBlockOneiOSDevTest;
+			productName = jserranoBlockOneiOSDevTest;
+			productReference = 54B9103D2453455700ABBEAF /* jserranoBlockOneiOSDevTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54B910522453455800ABBEAF /* jserranoBlockOneiOSDevTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B9106A2453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTestTests" */;
+			buildPhases = (
+				54B9104F2453455800ABBEAF /* Sources */,
+				54B910502453455800ABBEAF /* Frameworks */,
+				54B910512453455800ABBEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54B910552453455800ABBEAF /* PBXTargetDependency */,
+			);
+			name = jserranoBlockOneiOSDevTestTests;
+			productName = jserranoBlockOneiOSDevTestTests;
+			productReference = 54B910532453455800ABBEAF /* jserranoBlockOneiOSDevTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54B9105D2453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B9106D2453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTestUITests" */;
+			buildPhases = (
+				54B9105A2453455800ABBEAF /* Sources */,
+				54B9105B2453455800ABBEAF /* Frameworks */,
+				54B9105C2453455800ABBEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54B910602453455800ABBEAF /* PBXTargetDependency */,
+			);
+			name = jserranoBlockOneiOSDevTestUITests;
+			productName = jserranoBlockOneiOSDevTestUITests;
+			productReference = 54B9105E2453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54B910352453455700ABBEAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jonathand Alberto Serrano Serrano";
+				TargetAttributes = {
+					54B9103C2453455700ABBEAF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					54B910522453455800ABBEAF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 54B9103C2453455700ABBEAF;
+					};
+					54B9105D2453455800ABBEAF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 54B9103C2453455700ABBEAF;
+					};
+				};
+			};
+			buildConfigurationList = 54B910382453455700ABBEAF /* Build configuration list for PBXProject "jserranoBlockOneiOSDevTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54B910342453455700ABBEAF;
+			productRefGroup = 54B9103E2453455700ABBEAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B9103C2453455700ABBEAF /* jserranoBlockOneiOSDevTest */,
+				54B910522453455800ABBEAF /* jserranoBlockOneiOSDevTestTests */,
+				54B9105D2453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54B9103B2453455700ABBEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B9104D2453455800ABBEAF /* LaunchScreen.storyboard in Resources */,
+				54BB68152457241D003DE55B /* BlockTableViewCell.xib in Resources */,
+				54B9104A2453455800ABBEAF /* Preview Assets.xcassets in Resources */,
+				54B910472453455800ABBEAF /* Assets.xcassets in Resources */,
+				54B9107A2453479C00ABBEAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B910512453455800ABBEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B9105C2453455800ABBEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54B910392453455700ABBEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54BB682424574A1E003DE55B /* BlockDetailPresenter.swift in Sources */,
+				54B910942453A43600ABBEAF /* GetBlockListAdapter.swift in Sources */,
+				54B9108124537F0E00ABBEAF /* ServiceResponse.swift in Sources */,
+				54B910992453A60C00ABBEAF /* BlockListPresenter.swift in Sources */,
+				54BB681B245730B9003DE55B /* UIViewController.swift in Sources */,
+				54BB681D24573959003DE55B /* GetBlockchainInfo.swift in Sources */,
+				54BB681F2457398A003DE55B /* GetBlockchainInfoAdapter.swift in Sources */,
+				54BB682624574A2F003DE55B /* BlockDetailInteractor.swift in Sources */,
+				54B9108B24538F9D00ABBEAF /* BlockchainService.swift in Sources */,
+				54B91087245380AB00ABBEAF /* Block.swift in Sources */,
+				54B910892453819900ABBEAF /* Blockchain.swift in Sources */,
+				540CC276245A384500D70263 /* BlockDetailRouter.swift in Sources */,
+				54B9107D245349ED00ABBEAF /* URLSessionProtocol.swift in Sources */,
+				54B910842453800900ABBEAF /* BlockServiceAdapter.swift in Sources */,
+				54BB68142457241D003DE55B /* BlockTableViewCell.swift in Sources */,
+				54B9107F24534CF300ABBEAF /* BlockService.swift in Sources */,
+				54BB682224574A01003DE55B /* BlockDetailViewController.swift in Sources */,
+				540CC272245A179400D70263 /* BlockListRouter.swift in Sources */,
+				54B910412453455700ABBEAF /* AppDelegate.swift in Sources */,
+				54B9108F24539DE200ABBEAF /* BlockchainError.swift in Sources */,
+				54B910912453A3C100ABBEAF /* GetBlockList.swift in Sources */,
+				54B9108D24538FAD00ABBEAF /* BlockchainServiceAdapter.swift in Sources */,
+				54B910972453A5FE00ABBEAF /* BlockListInteractor.swift in Sources */,
+				54B910782453477600ABBEAF /* BlockListViewController.swift in Sources */,
+				54BB6818245727A1003DE55B /* BlockViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B9104F2453455800ABBEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5447000D24587A00000BEB66 /* GetBlockListTests.swift in Sources */,
+				549AAA52245B348000C5352C /* BlockServiceTests.swift in Sources */,
+				5447FFFF245878AE000BEB66 /* MockGetBlockchainInfo.swift in Sources */,
+				5447000F24587A13000BEB66 /* GetBlockchainInfoTests.swift in Sources */,
+				549AAA4F245B332E00C5352C /* MockURLSession.swift in Sources */,
+				5447000B245879D2000BEB66 /* MockBlockDetailPresenter.swift in Sources */,
+				5447FFF924587861000BEB66 /* MockBlockchainService.swift in Sources */,
+				5447001724587A6B000BEB66 /* BlockDetailInteractorTests.swift in Sources */,
+				544700052458798E000BEB66 /* MockBlockListPresenter.swift in Sources */,
+				5447FFFD24587896000BEB66 /* MockGetBlockList.swift in Sources */,
+				54470009245879BD000BEB66 /* MockBlockDetailView.swift in Sources */,
+				5447001324587A36000BEB66 /* BlockListPresenterTests.swift in Sources */,
+				5447001124587A27000BEB66 /* BlockListInteractorTests.swift in Sources */,
+				5447001924587A7E000BEB66 /* BlockDetailPresenterTests.swift.swift in Sources */,
+				54F435752458EDD0005F44C4 /* MockBlockListView.swift in Sources */,
+				549AAA54245B382800C5352C /* BlockchainServiceTests.swift in Sources */,
+				5447FFF72458783D000BEB66 /* MockBlockService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B9105A2453455800ABBEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B910632453455800ABBEAF /* jserranoBlockOneiOSDevTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54B910552453455800ABBEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54B9103C2453455700ABBEAF /* jserranoBlockOneiOSDevTest */;
+			targetProxy = 54B910542453455800ABBEAF /* PBXContainerItemProxy */;
+		};
+		54B910602453455800ABBEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54B9103C2453455700ABBEAF /* jserranoBlockOneiOSDevTest */;
+			targetProxy = 54B9105F2453455800ABBEAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54B9104B2453455800ABBEAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54B9104C2453455800ABBEAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54B910652453455800ABBEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54B910662453455800ABBEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54B910682453455800ABBEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"jserranoBlockOneiOSDevTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54B910692453455800ABBEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"jserranoBlockOneiOSDevTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		54B9106B2453455800ABBEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jserranoBlockOneiOSDevTest.app/jserranoBlockOneiOSDevTest";
+			};
+			name = Debug;
+		};
+		54B9106C2453455800ABBEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jserranoBlockOneiOSDevTest.app/jserranoBlockOneiOSDevTest";
+			};
+			name = Release;
+		};
+		54B9106E2453455800ABBEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jserranoBlockOneiOSDevTest;
+			};
+			name = Debug;
+		};
+		54B9106F2453455800ABBEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = jserranoBlockOneiOSDevTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.com.jserranoBlockOneiOSDevTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jserranoBlockOneiOSDevTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54B910382453455700ABBEAF /* Build configuration list for PBXProject "jserranoBlockOneiOSDevTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B910652453455800ABBEAF /* Debug */,
+				54B910662453455800ABBEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54B910672453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B910682453455800ABBEAF /* Debug */,
+				54B910692453455800ABBEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54B9106A2453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B9106B2453455800ABBEAF /* Debug */,
+				54B9106C2453455800ABBEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54B9106D2453455800ABBEAF /* Build configuration list for PBXNativeTarget "jserranoBlockOneiOSDevTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B9106E2453455800ABBEAF /* Debug */,
+				54B9106F2453455800ABBEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54B910352453455700ABBEAF /* Project object */;
+}
