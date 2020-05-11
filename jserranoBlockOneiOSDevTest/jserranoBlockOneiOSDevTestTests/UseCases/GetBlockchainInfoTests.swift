@@ -35,18 +35,7 @@ final class GetBlockchainInfoTests: XCTestCase {
         let mockBlockChainInfo = Blockchain(serverVersion: "mock_serverVersion",
                                         chainId: "mock_chainId",
                                         headBlockNum: 0,
-                                        headBlockId: "mock_headBlockId",
-                                        headBlockTime: "mock_headBlockTime",
-                                        headBlockProducer: "mock_headBlockProducer",
-                                        lastIrreversibleBlockNum: 0,
-                                        lastIrreversibleBlockId: "mock_lastIrreversibleBlockId",
-                                        virtualBlockCpuLimit: 0,
-                                        virtualBlockNetLimit: 0,
-                                        blockCpuLimit: 0,
-                                        blockNetLimit: 0,
-                                        serverVersionString: "mock_serverVersionString",
-                                        forkDbHeadBlockNum: 0,
-                                        forkBbHeadBlockId: "mock_forkBbHeadBlockId")
+                                        headBlockId: "mock_headBlockId")
         
         blockchainService.mockGetInfoResponse = .success(response: mockBlockChainInfo)
         

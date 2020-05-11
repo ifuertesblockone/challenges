@@ -137,6 +137,6 @@ private extension BlockListPresenterTests {
                 producer: block.producer,
                 numberOfTransactions: block.transactions.count,
                 producerSignature: block.producerSignature,
-                jsonResponse: block.rawJsonResponse))
+                jsonResponse: block.rawJsonResponse?.description))
     }
 }

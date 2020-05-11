@@ -17,7 +17,7 @@ final class BlockchainServiceAdapter {
         var urlSession: URLSessionProtocol = URLSessionAdapter()
     }
     
-    let dependencies: Dependencies
+    private let dependencies: Dependencies
     
     init(dependencies: Dependencies = .init()) {
         self.dependencies = dependencies
@@ -26,7 +26,8 @@ final class BlockchainServiceAdapter {
 
 extension BlockchainServiceAdapter: BlockchainService {
     func getInfo(completion: @escaping BlockchainInfoResponse) {
-        guard let request = makeRequest(with: .post) else {
+        guard let request = dependencies.urlSession.makeRequest(with: Constants.getInfoEndpoint, method: .post, data: nil)
+        else {
             completion(.failure(error: BlockchainError.unknownError))
             return
         }
@@ -43,27 +44,15 @@ extension BlockchainServiceAdapter: BlockchainService {
 }
 
 private extension BlockchainServiceAdapter {
-    func makeRequest(with method: HTTPMethod = .get) -> URLRequest? {
-        guard let url = URL(string: Constants.getInfoEndpoint) else {
-            return nil
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        request.cachePolicy = .reloadIgnoringCacheData
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        return request
-    }
-    
     func handleResponse(data: Data?, error: Error?, completion: @escaping BlockchainInfoResponse) {
         guard let error = error else {
-            guard let data = data else {
+            guard
+                let data = data,
+                let blockchainInfo = parser(withData: data)
+            else {
                 completion(.failure(error: BlockchainError.unknownError))
                 return
             }
-            
-            let blockchainInfo = parser(withData: data)
             
             completion(.success(response: blockchainInfo))
             return

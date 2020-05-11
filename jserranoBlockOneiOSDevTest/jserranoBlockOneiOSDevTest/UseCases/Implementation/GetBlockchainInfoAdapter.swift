@@ -14,8 +14,6 @@ final class GetBlockchainInfoAdapter: GetBlockchainInfo {
     }
     
     let dependencies: Dependencies
-    var currentBlockNumber: Int = 1
-    var blockList: [Block?] = []
     
     init(dependencies: Dependencies = .init()) {
         self.dependencies = dependencies

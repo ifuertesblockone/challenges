@@ -14,7 +14,7 @@ struct BlockListViewModel: Equatable {
             var producer: String
             var numberOfTransactions: Int
             var producerSignature: String
-            var jsonResponse: AnyObject?
+            var jsonResponse: String?
         }
         
         var timestamp: String

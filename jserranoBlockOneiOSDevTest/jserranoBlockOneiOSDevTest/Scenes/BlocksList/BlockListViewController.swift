@@ -21,7 +21,7 @@ class BlockListViewController: UIViewController {
            static let blockDetailSegue = "BlockDetail"
     }
     
-    var interactor: BlockListInteractorProtocol?
+    private var interactor: BlockListInteractorProtocol?
     var viewModel: BlockListViewModel?
     var router: (NSObjectProtocol & BlockListRouting & BlockListDataPassing)?
 

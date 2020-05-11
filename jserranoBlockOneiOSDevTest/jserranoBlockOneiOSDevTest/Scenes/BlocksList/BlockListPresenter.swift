@@ -32,7 +32,7 @@ final class BlockListPresenter {
     }
     
     let dependencies: Dependencies
-    var view: BlockListViewControllerProtocol? {
+    private var view: BlockListViewControllerProtocol? {
         return dependencies.view
     }
     
@@ -81,6 +81,6 @@ private extension BlockListPresenter {
                 producer: block.producer,
                 numberOfTransactions: block.transactions.count,
                 producerSignature: block.producerSignature,
-                jsonResponse: block.rawJsonResponse))
+                jsonResponse: block.rawJsonResponse?.description))
     }
 }
